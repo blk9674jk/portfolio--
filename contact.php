@@ -48,14 +48,14 @@ if (!isset($_GET['mode']) || $_GET['mode'] !== 'edit') {
                             <div class="form-row">
                                 <div class="form-group">
                                     <dt>お名前<span class="required">必須</span></dt>
-                                    <dd><input type="text" name="name" required value="<?php echo htmlspecialchars($_SESSION['name'] ?? '', ENT_QUOTES, 'UTF-8'); ?>"></dd>
+                                    <dd><input type="text" name="name" placeholder="例）田中 一郎" required value="<?php echo htmlspecialchars($_SESSION['name'] ?? '', ENT_QUOTES, 'UTF-8'); ?>"></dd>
                                 </div>
                                 <p class="error-message"></p>
                             </div>
                             <div class="form-row">
                                 <div class="form-group">
                                     <dt>フリガナ<span class="required">必須</span></dt>
-                                    <dd><input type="text" name="furigana" required value="<?php echo htmlspecialchars($_SESSION['furigana'] ?? '', ENT_QUOTES, 'UTF-8'); ?>"></dd>
+                                    <dd><input type="text" name="furigana" placeholder="例）タナカ イチロウ" required value="<?php echo htmlspecialchars($_SESSION['furigana'] ?? '', ENT_QUOTES, 'UTF-8'); ?>"></dd>
                                 </div>
                                 <p class="error-message"></p>
                             </div>
@@ -82,7 +82,7 @@ if (!isset($_GET['mode']) || $_GET['mode'] !== 'edit') {
                             <div class="form-row">
                                 <div class="form-group">
                                     <dt>メールアドレス<span class="required">必須</span></dt>
-                                    <dd><input type="email" name="email" required value="<?php echo htmlspecialchars($_SESSION['email'] ?? '', ENT_QUOTES, 'UTF-8'); ?>"></dd>
+                                    <dd><input type="email" name="email" placeholder="example@email.com" required value="<?php echo htmlspecialchars($_SESSION['email'] ?? '', ENT_QUOTES, 'UTF-8'); ?>"></dd>
                                 </div>
                                 <p class="error-message"></p>
                             </div>
@@ -104,7 +104,7 @@ if (!isset($_GET['mode']) || $_GET['mode'] !== 'edit') {
                             <div class="form-row">
                                 <div class="form-group">
                                     <dt>年齢</dt>
-                                    <dd><input type="text" name="resident_age" value="<?php echo htmlspecialchars($_SESSION['resident_age'] ?? '', ENT_QUOTES, 'UTF-8'); ?>"></dd>
+                                    <dd><input type="text" name="resident_age" placeholder="例）80歳" value="<?php echo htmlspecialchars($_SESSION['resident_age'] ?? '', ENT_QUOTES, 'UTF-8'); ?>"></dd>
                                 </div>
                             </div>
                             <div class="form-row">
@@ -188,7 +188,7 @@ if (!isset($_GET['mode']) || $_GET['mode'] !== 'edit') {
                         <div class="privacy-policy-agreement">
                             <label>
                                 <input type="checkbox" name="privacy_policy" value="agreed" required>
-                                <a href="#" class="js-open-modal">個人情報の取り扱いについて</a>に同意する
+                                <span><a href="#" class="js-open-modal">個人情報の取り扱いについて</a>に同意する</span>
                             </label>
                             <p class="error-message"></p>
                         </div>

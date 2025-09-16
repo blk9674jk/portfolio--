@@ -93,14 +93,14 @@ if (!isset($_GET['mode']) || $_GET['mode'] !== 'edit') {
                                 <div class="form-row">
                                     <dl class="form-group">
                                         <dt><label for="applicant-name">お名前</label><span class="required">必須</span></dt>
-                                        <dd><input type="text" id="applicant-name" name="applicant_name" required value="<?php echo htmlspecialchars($_SESSION['applicant_name'] ?? '', ENT_QUOTES, 'UTF-8'); ?>"></dd>
+                                        <dd><input type="text" id="applicant-name" name="applicant_name" placeholder="例）田中 一郎" required value="<?php echo htmlspecialchars($_SESSION['applicant_name'] ?? '', ENT_QUOTES, 'UTF-8'); ?>"></dd>
                                     </dl>
                                     <p class="error-message"></p>
                                 </div>
                                 <div class="form-row">
                                     <dl class="form-group">
                                         <dt><label for="applicant-furigana">フリガナ</label><span class="required">必須</span></dt>
-                                        <dd><input type="text" id="applicant-furigana" name="applicant_furigana" required value="<?php echo htmlspecialchars($_SESSION['applicant_furigana'] ?? '', ENT_QUOTES, 'UTF-8'); ?>"></dd>
+                                        <dd><input type="text" id="applicant-furigana" name="applicant_furigana" placeholder="例）タナカ イチロウ" required value="<?php echo htmlspecialchars($_SESSION['applicant_furigana'] ?? '', ENT_QUOTES, 'UTF-8'); ?>"></dd>
                                     </dl>
                                     <p class="error-message"></p>
                                 </div>
@@ -116,7 +116,7 @@ if (!isset($_GET['mode']) || $_GET['mode'] !== 'edit') {
                                 <div class="form-row">
                                     <dl class="form-group">
                                         <dt><label for="applicant-email">メールアドレス</label><span class="required">必須</span></dt>
-                                        <dd><input type="email" id="applicant-email" name="applicant_email" required value="<?php echo htmlspecialchars($_SESSION['applicant_email'] ?? '', ENT_QUOTES, 'UTF-8'); ?>"></dd>
+                                        <dd><input type="email" id="applicant-email" name="applicant_email" placeholder="example@email.com" required value="<?php echo htmlspecialchars($_SESSION['applicant_email'] ?? '', ENT_QUOTES, 'UTF-8'); ?>"></dd>
                                     </dl>
                                     <p class="error-message"></p>
                                 </div>
@@ -142,21 +142,21 @@ if (!isset($_GET['mode']) || $_GET['mode'] !== 'edit') {
                                 <div class="form-row">
                                     <dl class="form-group">
                                         <dt><label for="resident-name">お名前</label><span class="required">必須</span></dt>
-                                        <dd><input type="text" id="resident-name" name="resident_name" required value="<?php echo htmlspecialchars($_SESSION['resident_name'] ?? '', ENT_QUOTES, 'UTF-8'); ?>"></dd>
+                                        <dd><input type="text" id="resident-name" name="resident_name" placeholder="例）田中 一郎" required value="<?php echo htmlspecialchars($_SESSION['resident_name'] ?? '', ENT_QUOTES, 'UTF-8'); ?>"></dd>
                                     </dl>
                                     <p class="error-message"></p>
                                 </div>
                                 <div class="form-row">
                                     <dl class="form-group">
                                         <dt><label for="resident-furigana">フリガナ</label><span class="required">必須</span></dt>
-                                        <dd><input type="text" id="resident-furigana" name="resident_furigana" required value="<?php echo htmlspecialchars($_SESSION['resident_furigana'] ?? '', ENT_QUOTES, 'UTF-8'); ?>"></dd>
+                                        <dd><input type="text" id="resident-furigana" name="resident_furigana" placeholder="例）タナカ イチロウ" required value="<?php echo htmlspecialchars($_SESSION['resident_furigana'] ?? '', ENT_QUOTES, 'UTF-8'); ?>"></dd>
                                     </dl>
                                     <p class="error-message"></p>
                                 </div>
                                 <div class="form-row">
                                     <dl class="form-group">
                                         <dt><label for="resident-age">年齢</label></dt>
-                                        <dd><input type="text" id="resident-age" name="resident_age_apply" inputmode="numeric" pattern="\d*" value="<?php echo htmlspecialchars($_SESSION['resident_age_apply'] ?? '', ENT_QUOTES, 'UTF-8'); ?>"></dd>
+                                        <dd><input type="text" id="resident-age" name="resident_age_apply" placeholder="例）80歳" inputmode="numeric" pattern="\d*" value="<?php echo htmlspecialchars($_SESSION['resident_age_apply'] ?? '', ENT_QUOTES, 'UTF-8'); ?>"></dd>
                                     </dl>
                                 </div>
                                 <div class="form-row">
@@ -272,15 +272,15 @@ if (!isset($_GET['mode']) || $_GET['mode'] !== 'edit') {
                                 <div class="form-row">
                                     <dl class="form-group">
                                         <dt><label for="questions">ご質問・ご不明点</label></dt>
-                                        <dd><textarea id="questions" name="questions" rows="6"><?php echo htmlspecialchars($_SESSION['questions'] ?? '', ENT_QUOTES, 'UTF-8'); ?></textarea></dd>
+                                        <dd><textarea id="questions" name="questions" placeholder="ご質問やご相談したいこと、その他ご希望などをご自由にご記入ください。" rows="6"><?php echo htmlspecialchars($_SESSION['questions'] ?? '', ENT_QUOTES, 'UTF-8'); ?></textarea></dd>
                                     </dl>
                                 </div>
                             </div>
     
                             <div class="privacy-policy-agreement">
                                 <label>
-                                    <input type="checkbox" name="privacy_policy" value="同意" required>
-                                    <a href="#" class="js-open-modal">個人情報の取り扱いについて</a>に同意する
+                                    <input type="checkbox" name="privacy_policy" value="agreed" required>
+                                    <span><a href="#" class="js-open-modal">個人情報の取り扱いについて</a>に同意する</span>
                                 </label>
                                 <p class="error-message"></p>
                             </div>

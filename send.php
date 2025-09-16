@@ -61,7 +61,7 @@ if ($form_type === '資料請求・お問い合わせ') {
     $body .= "【ご質問・ご不明点】\n" . ($form_data['questions'] ?? '') . "\n";
 }
 
-$to = "";
+$to = "blk_9674_jk@outlook.com";
 
 $headers = "From: no-reply@re-step-garden.com\r\n";
 $headers .= "Reply-To: " . ($form_data['email'] ?? $form_data['applicant_email'] ?? '') . "\r\n";
